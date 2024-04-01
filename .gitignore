@@ -1,0 +1,7 @@
+.cache
+.vs
+build
+cmake
+out
+
+compile_commands.json

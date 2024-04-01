@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.10)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake")
+
+find_package(WDK REQUIRED)
+
+wdk_add_driver(v2p_translator driver.cpp mmu_paging/mmu_paging.cpp)
+
+target_link_options(v2p_translator PRIVATE /INTEGRITYCHECK)
